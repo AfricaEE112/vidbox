@@ -1,0 +1,1 @@
+{'folders': ['/srv/disks/media/Фільми'], 'anime_folder': '/srv/disks/media/Аніме'}

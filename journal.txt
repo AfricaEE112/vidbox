@@ -1,0 +1,63 @@
+Nov 21 13:24:04 ip-10-0-133-233 systemd[1]: Started gazda.service - Hata: gazda — системні дії для панелі (root, білий список).
+Nov 21 13:24:04 ip-10-0-133-233 python3[4788]: gazda слухає /run/hata/gazda.sock
+Nov 21 13:24:04 ip-10-0-133-233 systemd[1]: Started hata-screen.service - Hata: статус і QR-код на екрані ноутбука (tty1).
+Nov 21 13:24:04 ip-10-0-133-233 systemd[1]: Started hata.service - Hata: панель домашнього сервера.
+Nov 21 13:24:04 ip-10-0-133-233 systemd[1]: hata-screen.service: Deactivated successfully.
+Nov 21 13:24:04 ip-10-0-133-233 python3[4857]: Hata: панель на порту 80
+Nov 21 13:24:07 ip-10-0-133-233 systemd[1]: hata-screen.service: Scheduled restart job, restart counter is at 1.
+Nov 21 13:24:07 ip-10-0-133-233 systemd[1]: Started hata-screen.service - Hata: статус і QR-код на екрані ноутбука (tty1).
+Nov 21 13:24:07 ip-10-0-133-233 python3[4897]: hata-screen: старт, stdout=/dev/tty1
+Nov 21 13:24:49 ip-10-0-133-233 systemd[1]: Started vidbox.service - Hata: VidBox — домашній відеосервер.
+Nov 21 13:24:49 ip-10-0-133-233 systemd[1]: Stopping vidbox.service - Hata: VidBox — домашній відеосервер...
+Nov 21 13:24:49 ip-10-0-133-233 systemd[1]: vidbox.service: Deactivated successfully.
+Nov 21 13:24:49 ip-10-0-133-233 systemd[1]: Stopped vidbox.service - Hata: VidBox — домашній відеосервер.
+Nov 21 13:24:49 ip-10-0-133-233 systemd[1]: Started vidbox.service - Hata: VidBox — домашній відеосервер.
+Nov 21 13:24:53 ip-10-0-133-233 python3[4857]: Копії: готово — 2026-11-21 13-24, 14 файлів
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: ----------------------------------------
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: Exception occurred during processing of request from ('127.0.0.1', 40630)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: Traceback (most recent call last):
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.finish_request(request, client_address)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.RequestHandlerClass(request, client_address, self)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.handle()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/http/server.py", line 436, in handle
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.handle_one_request()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     method()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 662, in do_GET
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     return self.json(gazda({'do': 'journal', 'n': 14}, 30))
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 590, in json
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.send(code, json.dumps(obj, ensure_ascii=False).encode(), extra=extra)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 587, in send
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.wfile.write(body)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 840, in write
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self._sock.sendall(b)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: BrokenPipeError: [Errno 32] Broken pipe
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: ----------------------------------------
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: ----------------------------------------
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: Exception occurred during processing of request from ('127.0.0.1', 40612)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: Traceback (most recent call last):
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.finish_request(request, client_address)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.RequestHandlerClass(request, client_address, self)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.handle()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/http/server.py", line 438, in handle
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.handle_one_request()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     method()
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 803, in do_POST
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     return self.json(gazda({'do': 'timezone', 'tz': d.get('tz')}, 60))
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 590, in json
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.send(code, json.dumps(obj, ensure_ascii=False).encode(), extra=extra)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/opt/hata/src/core/hata.py", line 587, in send
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self.wfile.write(body)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:   File "/usr/lib/python3.12/socketserver.py", line 840, in write
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]:     self._sock.sendall(b)
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: BrokenPipeError: [Errno 32] Broken pipe
+Nov 21 13:24:57 ip-10-0-133-233 python3[4857]: ----------------------------------------
